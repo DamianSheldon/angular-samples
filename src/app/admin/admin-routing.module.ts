@@ -5,10 +5,11 @@ import { AdminComponent } from './admin/admin.component';
 import { ManageCrisisComponent } from './manage-crisis/manage-crisis.component';
 import { ManageHeroesComponent } from './manage-heroes/manage-heroes.component';
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { AuthGuard } from '../auth/auth.guard';
 
 const routes: Routes = [
     {
-        path: 'admin', component: AdminComponent, children: [
+        path: 'admin', component: AdminComponent, canActivate: [AuthGuard], children: [
             {
                 path: '', children: [
                     { path: 'crises', component: ManageCrisisComponent },
@@ -21,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forChild(routes)],
+    exports: [RouterModule]
 })
 export class AdminRoutingModule { }
