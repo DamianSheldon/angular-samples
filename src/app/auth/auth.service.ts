@@ -15,7 +15,7 @@ export class AuthService {
   constructor() { }
 
   login(): Observable<boolean> {
-    return of(ture).pipe(
+    return of(true).pipe(
       delay(1000),
       tap(val => this.isLoggedIn = true)
     );
