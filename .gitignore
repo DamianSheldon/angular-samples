@@ -37,3 +37,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# angular-router-sample
+angular-router-sample/dist
+angular-router-sample/node_modules
