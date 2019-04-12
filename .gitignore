@@ -45,3 +45,7 @@ angular-tour-of-heroes/node_modules/
 # Angular forms
 angular-forms/dist/
 angular-forms/node_modules/
+
+# angular-router-sample
+angular-router-sample/dist
+angular-router-sample/node_modules
